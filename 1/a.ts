@@ -35,3 +35,14 @@ for (const line of lines) {
 const maxCalories = Math.max(...elfs.map((elf) => elf.totalCalories));
 
 console.log(maxCalories);
+
+// b is easy
+
+// top 3 total calories
+const top3 = elfs.sort((a, b) => b.totalCalories - a.totalCalories).slice(0, 3);
+
+console.log(top3);
+
+const totalOfTop3 = top3.reduce((a, b) => a + b.totalCalories, 0);
+
+console.log(totalOfTop3);
